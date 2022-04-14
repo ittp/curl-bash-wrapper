@@ -14,7 +14,7 @@ on:
         # Friendly description to be shown in the UI instead of 'name'
         description: 'IP'
         # Default value if no value is explicitly provided
-        default: '188.134.65.67'
+        default: ''
         # Input has to be provided for the workflow to run
         required: true
 
@@ -23,15 +23,15 @@ jobs:
   # This workflow contains a single job called "greet"
   greet:
     # The type of runner that the job will run on
-    runs-on: ubuntu-latest
+  runs-on: ubuntu-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:
-    # Runs a single command using the runners shell
-    - name: Send greeting
-      run: echo "Hello ${{ github.event.inputs.name }}"
-    - name: Fast Webhook
-    # You may pin to the exact commit or the version.
+  steps:
+  # Runs a single command using the runners shell
+  - name: Send greeting
+    run: echo "Hello ${{ github.event.inputs.name }}"
+  - name: Fast Webhook
+  # You may pin to the exact commit or the version.
     # uses: jasongitmail/fast-webhook@6deed6ce6c4f3b7044a27fc272b7a019a6e4c41a
     uses: jasongitmail/fast-webhook@v1.1.4
     with:
